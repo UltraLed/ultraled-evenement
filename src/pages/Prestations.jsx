@@ -66,7 +66,7 @@ export default function Prestations() {
           {[
             {
               name: "Essentiel",
-              price: "À partir de 199€",
+              price: "Sur devis",
               features: [
                 "Sonorisation",
                 "Éclairage",
@@ -76,7 +76,7 @@ export default function Prestations() {
             },
             {
               name: "Avancé",
-              price: "À partir de 270€",
+              price: "Sur devis",
               features: [
                 "Sonorisation",
                 "Éclairage",
@@ -88,7 +88,7 @@ export default function Prestations() {
             },
             {
               name: "Premium",
-              price: "À partir de 320€",
+              price: "Sur devis",
               features: [
                 "Sonorisation",
                 "Éclairage",
