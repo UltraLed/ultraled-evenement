@@ -72,7 +72,8 @@ export default function Footer() {
             <div className="footer-links">
               <span>Basé à Cluses (74)</span>
               <span>Vallée de l'arve & alentours</span>
-              <span>Email : ultraled.evenement@gmail.com</span>
+              <span>Email : contact@ultraled-evenement.fr</span>
+              <span>Téléphone : 06 11 68 29 92</span>
             </div>
           </div>
         </div>
