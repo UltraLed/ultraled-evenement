@@ -1,0 +1,223 @@
+.prestation-detail-page {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+/* HERO */
+.prestation-detail-hero {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  margin-bottom: 2.5rem;
+}
+
+/* MAIN MEDIA (image ou vidéo) */
+.prestation-detail-main-media {
+  width: 100%;
+  height: 420px; /* Hauteur ajoutée pour rendre la vidéo visible */
+  max-height: 60vh;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+/* Image */
+.prestation-detail-main-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Vidéo */
+.prestation-detail-main-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* INTRO */
+.prestation-detail-intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 18px rgba(160, 32, 240, 0.7);
+}
+
+.prestation-detail-intro p {
+  color: var(--ultra-muted);
+  margin-bottom: 0.7rem;
+}
+
+/* GALERIE */
+.prestation-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.prestation-detail-thumb {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.prestation-detail-thumb img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENU */
+.prestation-detail-content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-bottom: 3rem;
+}
+
+.prestation-detail-block h2 {
+  margin-bottom: 0.8rem;
+}
+
+.prestation-detail-block ul {
+  list-style: none;
+  padding-left: 0;
+  color: var(--ultra-muted);
+}
+
+.prestation-detail-block li::before {
+  content: "• ";
+  color: var(--ultra-primary);
+}
+
+/* CTA */
+.prestation-detail-cta {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(160, 32, 240, 0.15),
+    rgba(0, 174, 239, 0.15)
+  );
+}
+
+.prestation-detail-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--ultra-primary), var(--ultra-secondary));
+  color: white;
+  font-weight: 600;
+  transition: var(--ultra-transition);
+}
+
+.prestation-detail-btn:hover {
+  box-shadow:
+    0 0 20px rgba(160, 32, 240, 0.8),
+    0 0 30px rgba(0, 174, 239, 0.6);
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .prestation-detail-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .prestation-detail-main-media {
+    height: 300px; /* Hauteur adaptée mobile */
+  }
+}
+
+/* VIDEO STYLE (comme Réalisations) */
+.video-wrapper {
+  width: 100%;
+  height: 420px; /* même hauteur que les images */
+  max-height: 60vh;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* VIDEO STYLE (comme Réalisations) */
+.video-wrapper {
+  width: 100%;
+  height: 420px;
+  max-height: 60vh;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: black;
+}
+
+/* GRID DES CARDS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+/* CARD */
+.sound-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* HOVER PREMIUM */
+.sound-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(160, 32, 240, 0.4);
+  box-shadow:
+    0 0 18px rgba(160, 32, 240, 0.25),
+    0 0 28px rgba(0, 174, 239, 0.25);
+}
+
+/* IMAGE */
+.sound-card-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* TITRE SOUS L’IMAGE */
+.sound-card-title {
+  padding: 1.2rem 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  border

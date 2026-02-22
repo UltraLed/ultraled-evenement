@@ -1,0 +1,99 @@
+.realisations-page {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.realisations-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.realisations-hero h1 {
+  font-size: 2.4rem;
+  text-shadow: 0 0 18px rgba(160, 32, 240, 0.7);
+}
+
+.realisations-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.real-card {
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: var(--ultra-transition);
+}
+
+.real-card:hover {
+  border-color: var(--ultra-primary);
+  box-shadow:
+    0 0 14px rgba(160, 32, 240, 0.5),
+    0 0 22px rgba(0, 174, 239, 0.4);
+  transform: translateY(-4px);
+}
+
+.real-img {
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.real-img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.real-card {
+  text-decoration: none;   /* enlève le soulignement */
+  color: inherit;          /* garde la couleur d'origine */
+}
+
+.real-card:visited,
+.real-card:hover,
+.real-card:active {
+  color: inherit;          /* empêche tout changement de couleur */
+  text-decoration: none;   /* empêche le soulignement */
+}
+
+.realisation-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.media-card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-card video,
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-card:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease;
+}
+
+.real-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* au lieu de cover */
+  background-color: #000; /* optionnel : évite les bandes blanches */
+}

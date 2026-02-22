@@ -1,0 +1,61 @@
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+  
+    /* Laisse apparaître le background LED */
+    background: none;
+  
+    /* Donne de la hauteur pour révéler le fond */
+    min-height: 60vh;
+  }
+  
+  /* HERO */
+  .home-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+  }
+  
+  .home-title {
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    font-weight: 700;
+  }
+  
+  .gradient {
+    background: linear-gradient(90deg, var(--ultra-primary), var(--ultra-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* CARDS */
+  .home-cards {
+    display: grid;
+    gap: 1.8rem;
+  }
+  
+  @media (min-width: 768px) {
+    .home-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .home-hero-image {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.home-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,50 @@
+/* ===== RESET DE BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== ROOT (optionnel si déjà dans global.css) ===== */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* On ne garde PAS les couleurs, car ton thème LED est dans global.css */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== BODY MINIMAL ===== */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Pas de display:flex ici → ça cassait ton footer */
+}
+
+/* ===== LIENS (optionnel) ===== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
