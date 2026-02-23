@@ -1,0 +1,66 @@
+/* ===== RESET MODERNE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== STRUCTURE GLOBALE ===== */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Roboto",
+    sans-serif;
+  color: #f5f5f5;
+  -webkit-font-smoothing: antialiased;
+
+  /* ===== BACKGROUND LED ===== */
+  background:
+    radial-gradient(circle at 0% 0%, rgba(160, 32, 240, 0.35), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(0, 174, 239, 0.35), transparent 60%),
+    linear-gradient(135deg, #050509, #050509, #090919);
+}
+
+/* ===== ZONE DE CONTENU ===== */
+.page-content {
+  flex: 1;
+  min-height: 100vh; /* garantit que le fond LED est visible */
+}
+
+/* ===== VARIABLES LED ===== */
+:root {
+  --ultra-bg: #050509;
+  --ultra-bg-alt: #0b0b12;
+  --ultra-primary: #a020f0;
+  --ultra-secondary: #00aeef;
+  --ultra-text: #f5f5f5;
+  --ultra-muted: #9ca3af;
+  --ultra-border: rgba(255, 255, 255, 0.08);
+  --ultra-glow: 0 0 18px rgba(160, 32, 240, 0.8);
+  --ultra-radius: 16px;
+  --ultra-transition: 0.25s ease;
+}
+
+/* ===== OVERLAY LED (effet profondeur) ===== */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  /* Overlay transparent pour laisser passer le LED */
+  background: radial-gradient(circle at 0% 0%, rgba(20, 20, 39, 0.4), rgba(6, 6, 12, 0.4));
+
+  z-index: -1;
+  pointer-events: none;
+}
