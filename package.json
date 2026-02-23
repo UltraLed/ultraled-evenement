@@ -10,14 +10,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-<<<<<<< HEAD
     "deploy": "gh-pages -d dist --repo https://github.com/UltraLed/ultraled-evenement.git",
-=======
-    "deploy": "gh-pages -d dist",
->>>>>>> 0124f532812bbbf456dd4acbd812cfb29f5f8a73
     "build:gh": "vite build --config vite.config.prod.js"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "emailjs-com": "^3.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.11.0"
