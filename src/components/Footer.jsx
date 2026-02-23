@@ -25,7 +25,7 @@ export default function Footer() {
 
             <div className="footer-socials">
               <a 
-                href="#" 
+                href="https://www.facebook.com/share/1Ag91zDRgu/?mibextid=wwXIfr" 
                 className="social-icon" 
                 target="_blank" 
                 rel="noopener noreferrer"
