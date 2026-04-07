@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === UltraLed Design System === */
+    
+    /* Core backgrounds */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --background-secondary: 240 10% 6%;
+    
+    /* Cards */
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 95%;
+    --card-hover: 240 10% 12%;
+    
+    /* Popover */
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Primary: Neon Blue */
+    --primary: 193 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    
+    /* Secondary: Neon Purple */
+    --secondary: 274 87% 53%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent: Neon Pink */
+    --accent: 310 100% 59%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Muted */
+    --muted: 240 6% 15%;
+    --muted-foreground: 240 5% 55%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders & inputs */
+    --border: 240 6% 18%;
+    --input: 240 6% 18%;
+    --ring: 193 100% 50%;
+    
+    --radius: 0.75rem;
+    
+    /* Neon glow colors (raw HSL for use in shadows) */
+    --neon-blue: 193 100% 50%;
+    --neon-purple: 274 87% 53%;
+    --neon-pink: 310 100% 59%;
+    
+    /* Sidebar */
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 193 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 240 10% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 240 6% 18%;
+    --sidebar-ring: 193 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Neon glow effects */
+  .glow-blue {
+    box-shadow: 0 0 15px hsl(193 100% 50% / 0.4), 0 0 45px hsl(193 100% 50% / 0.15);
+  }
+  .glow-purple {
+    box-shadow: 0 0 15px hsl(274 87% 53% / 0.4), 0 0 45px hsl(274 87% 53% / 0.15);
+  }
+  .glow-pink {
+    box-shadow: 0 0 15px hsl(310 100% 59% / 0.4), 0 0 45px hsl(310 100% 59% / 0.15);
+  }
+
+  /* Text glow */
+  .text-glow-blue {
+    text-shadow: 0 0 20px hsl(193 100% 50% / 0.6), 0 0 40px hsl(193 100% 50% / 0.3);
+  }
+  .text-glow-purple {
+    text-shadow: 0 0 20px hsl(274 87% 53% / 0.6), 0 0 40px hsl(274 87% 53% / 0.3);
+  }
+  .text-glow-pink {
+    text-shadow: 0 0 20px hsl(310 100% 59% / 0.6), 0 0 40px hsl(310 100% 59% / 0.3);
+  }
+
+  /* Neon border glow on hover */
+  .neon-border-hover {
+    @apply transition-all duration-300;
+    border: 1px solid hsl(var(--border));
+  }
+  .neon-border-hover:hover {
+    border-color: hsl(var(--primary) / 0.6);
+    box-shadow: 0 0 20px hsl(193 100% 50% / 0.2), inset 0 0 20px hsl(193 100% 50% / 0.05);
+  }
+
+  /* LED animated line */
+  .led-line {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      hsl(193 100% 50%) 0%,
+      hsl(274 87% 53%) 50%,
+      hsl(310 100% 59%) 100%
+    );
+    background-size: 200% 100%;
+    animation: led-sweep 3s ease-in-out infinite;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(193 100% 50%),
+      hsl(274 87% 53%),
+      hsl(310 100% 59%)
+    );
+  }
+
+  /* Section gradient background */
+  .section-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--background-secondary)) 100%
+    );
+  }
+
+  /* Glass card */
+  .glass-card {
+    @apply backdrop-blur-md border;
+    background: hsl(var(--card) / 0.6);
+    border-color: hsl(var(--border) / 0.5);
+  }
+}
+
+@layer utilities {
+  @keyframes led-sweep {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
