@@ -21,5 +21,14 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      // Si on arrive depuis 404.html, on restaure l'URL d'origine
+      const params = new URLSearchParams(window.location.search);
+      const redirect = params.get("redirect");
+      if (redirect) {
+        window.history.replaceState(null, "", redirect);
+      }
+    </script>
+
   </body>
 </html>
