@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // Redirection SPA pour GitHub Pages
+      // On reconstruit l'URL correcte après redirection
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+
+      // On renvoie vers index.html avec l'URL encodée
+      const redirectUrl = `/?redirect=${encodeURIComponent(path + search + hash)}`;
+      window.location.replace(redirectUrl);
+    </script>
+  </head>
+  <body></body>
+</html>
