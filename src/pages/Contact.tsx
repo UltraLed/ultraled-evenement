@@ -74,7 +74,7 @@ const Contact = () => {
             {[
               { icon: Mail, label: "Email", value: "contact@ultraled-evenement.fr", href: "mailto:contact@ultraled-evenement.fr" },
               { icon: Phone, label: "Téléphone", value: "06 00 00 00 00", href: "tel:+33600000000" },
-              { icon: MapPin, label: "Localisation", value: "France", href: undefined },
+              { icon: MapPin, label: "Localisation", value: "France (Haute-Savoie)", href: undefined },
             ].map((info) => (
               <NeonCard key={info.label} className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -148,7 +148,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground text-sm"
-                      placeholder="06 00 00 00 00"
+                      placeholder="06 11 68 29 92"
                     />
                   </div>
                   <div>
