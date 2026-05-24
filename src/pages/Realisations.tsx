@@ -10,14 +10,18 @@ import event3 from "@/assets/event-3.jpg";
 import event4 from "@/assets/event-4.jpg";
 import event5 from "@/assets/event-5.jpg";
 import event6 from "@/assets/event-6.jpg";
+import event7 from "@/assets/event-7.jpeg";
+import event8 from "@/assets/event-8.jpeg";
 
 const gallery = [
-  { src: event1, alt: "Soirée DJ avec éclairage LED bleu", category: "Soirée" },
-  { src: event2, alt: "Mariage avec mise en lumière violette", category: "Mariage" },
-  { src: event3, alt: "Événement corporate avec scène LED", category: "Corporate" },
+  { src: event1, alt: "Soirée DJ avec éclairage ", category: "Soirée" },
+  { src: event2, alt: "Mariage avec mise en lumière ", category: "Sonorisation" },
+  { src: event3, alt: "Événement corporate avec scène ", category: "Corporate" },
   { src: event4, alt: "Festival en plein air avec éclairages", category: "Festival" },
-  { src: event5, alt: "Anniversaire avec ambiance LED colorée", category: "Anniversaire" },
-  { src: event6, alt: "Système de sonorisation LED professionnel", category: "Sonorisation" },
+  { src: event5, alt: "Anniversaire avec ambiance colorée", category: "Anniversaire" },
+  { src: event6, alt: "Système de sonorisation professionnel", category: "Sonorisation" },
+  { src: event7, alt: "Sonorisation de la cérémonie du 8 mai à Cluses", category: "Sonorisation"},
+  { src: event8, alt: "Anniversaire à domicile avec éclairage et DJ", category: "Anniversaire" },
 ];
 
 const categories = ["Tous", ...new Set(gallery.map((g) => g.category))];
