@@ -12,16 +12,35 @@ import event5 from "@/assets/event-5.jpg";
 import event6 from "@/assets/event-6.jpg";
 import event7 from "@/assets/event-7.jpeg";
 import event8 from "@/assets/event-8.jpeg";
+import event9 from "@/assets/event-9.jpeg";
+import event10 from "@/assets/event-10.jpeg";
+import event11 from "@/assets/event-11.jpeg";
+import event12 from "@/assets/event-12.jpeg";
+import event13 from "@/assets/event-13.jpeg";
 
 const gallery = [
-  { src: event1, alt: "Soirée DJ avec éclairage ", category: "Soirée" },
-  { src: event2, alt: "Mariage avec mise en lumière ", category: "Sonorisation" },
-  { src: event3, alt: "Événement corporate avec scène ", category: "Corporate" },
-  { src: event4, alt: "Festival en plein air avec éclairages", category: "Festival" },
-  { src: event5, alt: "Anniversaire avec ambiance colorée", category: "Anniversaire" },
-  { src: event6, alt: "Système de sonorisation professionnel", category: "Sonorisation" },
-  { src: event7, alt: "Sonorisation de la cérémonie du 8 mai à Cluses", category: "Sonorisation"},
+
+  { src: event13, alt: "Sonorisation d'un concert suivis d'une soirée DJ avec éclairage professionnel", category: "Soirée"},
+  { src: event12, alt: "Soirée DJ avec éclairage professionnel et annimation", category: "Soirée"},
+  { src: event10, alt: "Sonorisation d'un tournois de foot sur 2 terrain en simultanée", category: "Sonorisation"},
+  { src: event11, alt: "Sonorisation de 3 groupes à la suite pour un concert suivis ", category: "Festival"},
+  { src: event9, alt: "Soirée DJ avec éclairage dynamique", category: "Soirée"},
   { src: event8, alt: "Anniversaire à domicile avec éclairage et DJ", category: "Anniversaire" },
+  { src: event7, alt: "Sonorisation de la cérémonie du 8 mai à Cluses", category: "Sonorisation"},
+  { src: event6, alt: "Système de sonorisation professionnel", category: "Sonorisation" },
+  { src: event5, alt: "Anniversaire avec ambiance colorée", category: "Anniversaire" },
+  { src: event3, alt: "Événement corporate avec scène ", category: "Corporate" },
+  { src: event1, alt: "Soirée DJ avec éclairage ", category: "Soirée" },
+  { src: event4, alt: "Festival en plein air avec éclairages", category: "Festival" },
+  { src: event2, alt: "Mariage avec mise en lumière ", category: "Sonorisation" },
+  
+  
+  
+  
+  
+  
+  
+  
 ];
 
 const categories = ["Tous", ...new Set(gallery.map((g) => g.category))];
